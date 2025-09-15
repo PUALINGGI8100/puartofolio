@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+.card-projects {
+    @apply bg-slate-100 flex flex-col relative max-w-full max-h-full md:max-w-xl xl:max-w-5xl overflow-y-hidden;
+}
+
+@scope (.card-projects) {
+    .nav-container {
+        @apply flex sticky top-0 p-5 bg-slate-200 items-center;
+    }
+    .content-container {
+        @apply max-w-full flex flex-col xl:flex-row bg-white overflow-y-auto grow gap-5 xl:gap-0 p-5;
+    }
+    .content-container.web {
+        @apply p-0 gap-0;
+    }
+    @scope (.nav-container) {
+        header { @apply text-center grow; }
+        h2 { @apply font-bold; }
+    }
+    @scope(.content-container:not(.web)) {
+        .content-card { @apply border border-slate-200 rounded-lg p-5 xl:min-w-[50%] max-h-max grow; }
+        .content-card.content-link {
+            @apply flex scale-95 flex-col md:flex-row gap-5 justify-center items-center gap-5 bg-slate-50 hover:bg-slate-500 hover:text-slate-50 hover:scale-100 transition-all duration-150 ease-in-out text-slate-800;
+        }
+        @scope (.content-card) {
+            .link-icon { @apply text-5xl; }
+            .link-texts-wrapper { @apply flex flex-col gap-3 items-center md:items-start grow; }
+            h2 { @apply text-xl font-bold; }
+        }
+    }
+    @scope(.content-container:is(.web)){
+        .content-card { @apply relative grid grid-cols-12 sm:grid-rows-2 border border-slate-200 bg-slate-50 rounded-lg p-0 xl:max-w-[50%] max-h-full sm:max-h-none xl:max-h-[400px] grow m-2 overflow-x-hidden bg-white; }
+        @scope(.content-card){
+            .img-wrapper {
+                @apply relative hidden sm:flex col-span-12 sm:col-span-6 max-h-[300px] sm:max-h-none items-center z-1 gap-5;
+            }
+            .card-body {
+                @apply flex flex-col bg-white col-span-12 sm:col-span-6 sm:row-span-2 z-2;
+            }
+            @scope(.img-wrapper){
+                .img-cover { @apply min-w-full flex justify-center max-h-full; }
+                img { @apply scale-90 sm:scale-100 object-contain; }
+            }
+            @scope(.card-body){
+                header { @apply font-bold text-sm p-2 bg-slate-800 text-slate-50; }
+                .card-main { @apply grow p-2; }
+                .card-text { @apply text-xs sm:text-sm; }
+            }
+        }
+        @scope(.content-card:is(.p-1)){
+            .img-wrapper { animation: Ltr_p1 15s linear infinite; }
+        }
+        @scope(.content-card:is(.p-2)){
+            .img-wrapper { animation: Ltr_p2 15s linear infinite; }
+        }
+        @keyframes Ltr_p1 {
+            from { left: 0; }
+            to { left: -200%; }
+        }
+        @keyframes Ltr_p2 {
+            from { left: 0; }
+            to { left: -400%; }
+        }
+    }
+}

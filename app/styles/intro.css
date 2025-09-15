@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+.card-intro {
+    @apply grow flex flex-col max-w-full md:max-w-xl;
+}
+
+@scope (.card-intro) {
+    .avatar-container {
+        @apply flex flex-col justify-center items-center py-10 px-5 grow rounded;
+    }
+    .social-container {
+        @apply flex flex-col items-center justify-end md:justify-center gap-8 py-10 grow bg-slate-100 rounded px-5 grow;
+    }
+    .nav-container {
+        @apply flex items-center justify-center gap-5 max-h-[1px] z-1;
+    }
+    @scope (.avatar-container){
+        .img-wrapper {
+            @apply max-w-[150px] max-h-[150px] relative grow border border-slate-200 rounded-full flex justify-center pt-2 bg-cyan-300;
+        }
+        @scope (.img-wrapper){
+            img {
+                @apply object-scale-down max-h-full w-[150px] rounded-full;
+            }
+            p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold; }
+        }
+        .descriptive-wrapper {
+            @apply pt-8 flex flex-col gap-2 justify-center text-center;
+        }
+        @scope (.descriptive-wrapper){
+            .passion-wrapper { @apply flex gap-1 sm:gap-3 flex-wrap justify-center text-nowrap; }
+            h2 { @apply text-2xl font-bold; }
+            p { @apply text-[5pt] sm:text-xs font-bold border border-slate-200 rounded p-1; }
+        }
+    }
+    @scope (.social-container){
+        h2 { @apply text-xl md:text-2xl font-bold; }
+        .links-wrapper { @apply flex flex-wrap gap-4 items-center justify-center; }
+        @scope (.links-wrapper) {
+            a { @apply transition-all duration-150 ease-in-out text-lg md:text-3xl hover:scale-120; }
+        }
+    }
+    @scope (.nav-container){
+        .nav-wrapper { @apply flex h-max w-max gap-2 md:gap-5 flex-wrap; }
+        @scope(.nav-wrapper) {
+            .nav-item { @apply flex justify-center items-center border border-cyan-300 bg-cyan-300 md:bg-cyan-200 rounded-lg p-2 gap-2 text-slate-800 scale-90 hover:scale-100 hover:bg-cyan-300 transition-all duration-150 ease-in-out text-sm md:text-base font-bold; }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.card-achievements {
+    @apply grow flex flex-col max-w-full md:max-w-xl xl:max-w-5xl;
+}
+
+@scope (.card-achievements) {
+    .nav-container {
+        @apply flex sticky top-0 p-5 bg-slate-200 items-center;
+    }
+    @scope (.nav-container) {
+        header { @apply text-center grow; }
+        h2 { @apply font-bold; }
+    }
+}

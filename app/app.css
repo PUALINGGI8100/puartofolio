@@ -13,3 +13,5 @@ body {
     color-scheme: dark;
   }
 }
+
+*[role='button'] { @apply cursor-pointer; }

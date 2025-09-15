@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+p { @apply m-0; }
+
+.app-main {
+    @apply absolute left-0 top-0 min-h-[100vh] max-h-[100vh] min-w-[100vw] p-2 sm:p-5 flex justify-center;
+}
+
+@scope (.app-main){
+    .card-container {
+        @apply border border-slate-200 rounded lg:rounded-lg grow;
+    }
+}
+
+* {
+  --scrollbar-color-track: #0000ff00;
+  --scrollbar-color-thumb: #1cb5db;
+  --scrollbar-width: thin;
+  --scrollbar-gutter: auto;
+}
+
+@supports ((scrollbar-gutter: stable) and (scrollbar-width: auto)) {
+  * {
+    scrollbar-width: var(--scrollbar-width);
+    scrollbar-gutter: var(--scrollbar-gutter);
+  }
+}
+
+@supports (scrollbar-color: lime cyan) {
+  * {  scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track); }
+
+  [data-when="scrollbar-color"] { display: flex; }
+
+}
