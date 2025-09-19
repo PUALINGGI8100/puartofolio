@@ -10,6 +10,7 @@ import GB2 from "~/assets/projects/web/p2/home_p_2.png";
 import GB3 from "~/assets/projects/web/p2/about_p.png";
 import GB4 from "~/assets/projects/web/p2/contact_p.png";
 import Git_Card from "~/components/ui/Git_Card";
+import Img_Wrapper from "~/components/projects/web/Img_Wrapper";
 
 interface props {};
 
@@ -17,17 +18,7 @@ const Web_Pages : React.FC<props> = () => {
     return (
         <Content_Container_Projects extraClassName="web">
             <article className="content-card p-1">
-                <div className="img-wrapper">
-                    <span className="img-cover">
-                        <img src={G1} alt="Login" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={G2} alt="Register" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={G1} alt="Login" />
-                    </span>
-                </div>
+                <Img_Wrapper imgs={[G1, G2, G1]} />
                 <div className="card-body">
                     <header>
                         <h3>SISTEM PAKAR PENGENALAN HAMA DAN PENYAKIT JAGUNG BERBASIS <em>CERTAINTY FACTOR</em></h3>
@@ -41,29 +32,15 @@ const Web_Pages : React.FC<props> = () => {
                 </div>
             </article>
             <article className="content-card p-2">
-                <div className="img-wrapper">
-                    <span className="img-cover">
-                        <img src={GB1} alt="Login" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={GB2} alt="Register" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={GB3} alt="Register" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={GB4} alt="Register" />
-                    </span>
-                    <span className="img-cover">
-                        <img src={GB1} alt="Login" />
-                    </span>
-                </div>
+                <Img_Wrapper imgs={[GB1, GB2, GB3, GB4, GB1]} />
                 <div className="card-body">
                     <header>
                         <h3>REDESIGN BOOMAR SITE</h3>
                     </header>
                     <div className="card-main">
-
+                        <span className="card-text">
+                            <p>Merupakan salah satu syarat untuk menyelesaikan fundamental course <strong>ReVoU</strong>.</p>
+                        </span>
                     </div>
                     <Git_Card src="https://github.com/revou-fundamental-course/07-apr-25-PUALINGGI8100.git" />
                 </div>
