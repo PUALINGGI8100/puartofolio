@@ -13,8 +13,8 @@ p { @apply m-0; }
 }
 
 * {
-  --scrollbar-color-track: #0000ff00;
-  --scrollbar-color-thumb: #1cb5db;
+  --scrollbar-color-track: #00000000;
+  --scrollbar-color-thumb: #f0f0f0;
   --scrollbar-width: thin;
   --scrollbar-gutter: auto;
 }

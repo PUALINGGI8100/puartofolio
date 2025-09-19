@@ -19,10 +19,12 @@
             @apply max-w-[150px] max-h-[150px] relative grow border border-slate-200 rounded-full flex justify-center pt-2 bg-cyan-300;
         }
         @scope (.img-wrapper){
-            img {
-                @apply object-scale-down max-h-full w-[150px] rounded-full;
-            }
+            .q-link { @apply absolute right-0 top-0 border border-slate-200 rounded-full p-2 bg-slate-50 hover:scale-105; }
+            img { @apply object-scale-down max-h-full w-[150px] rounded-full; }
             p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold; }
+            @scope (.q-link){
+                * { animation: anim_rotations 5s infinite; animation-delay: 1s; }
+            }
         }
         .descriptive-wrapper {
             @apply pt-8 flex flex-col gap-2 justify-center text-center;
@@ -43,7 +45,15 @@
     @scope (.nav-container){
         .nav-wrapper { @apply flex h-max w-max gap-2 md:gap-5 flex-wrap; }
         @scope(.nav-wrapper) {
-            .nav-item { @apply flex justify-center items-center border border-cyan-300 bg-cyan-300 md:bg-cyan-200 rounded-lg p-2 gap-2 text-slate-800 scale-90 hover:scale-100 hover:bg-cyan-300 transition-all duration-150 ease-in-out text-sm md:text-base font-bold; }
+            .nav-item { @apply flex justify-center items-center border border-cyan-300 bg-cyan-300 md:bg-cyan-200 rounded-lg p-2 gap-2 text-slate-800 scale-90 hover:scale-100 hover:bg-cyan-300 transition-all duration-150 ease-in-out text-base font-bold; }
         }
+    }
+    @keyframes anim_rotations {
+        0% {  rotate: 0deg; }
+        25% { rotate: y 90deg; scale: 0.5; }
+        40% { rotate: 180deg; }
+        55% { rotate: x 270deg; }
+        80% { rotate: 360deg; }
+        100% { rotate: 360deg; }
     }
 }
