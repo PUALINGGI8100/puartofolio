@@ -34,7 +34,7 @@ const Web_Pages : React.FC<props> = () => {
                     </header>
                     <div className="card-main">
                         <span className="card-text">
-                            <p>Merupakan salah satu syarat untuk menyelesaikan program sarjana di Universitas Al Asyariah Mandar. Sistem dikembangkan Menggunakan <strong>ESDLC</strong> (John Durkin, 1994), Data diolah secara kuantitatif dengan memanfaatkan pendekatan <strong>certainty factor</strong> (John Durkin, 1994).</p>
+                            <p>Merupakan salah satu syarat untuk menyelesaikan program sarjana di Universitas Al Asyariah Mandar. Sistem dikembangkan Menggunakan <strong>ESDLC</strong> (Durkin, 1994, hlm. 217), Data diolah secara kuantitatif dengan memanfaatkan pendekatan <strong>certainty factor</strong> (Durkin, 1994, hlm. 344-353).</p>
                         </span>
                     </div>
                     <Git_Card src="https://github.com/PUALINGGI8100/ES_hama-penyakit-jagung.git" />
