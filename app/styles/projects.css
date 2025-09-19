@@ -6,7 +6,7 @@
 
 @scope (.card-projects) {
     .nav-container {
-        @apply flex sticky top-0 p-5 bg-slate-200 items-center;
+        @apply flex sticky top-0 p-5 bg-slate-200 items-center bg-slate-500 text-white;
     }
     .content-container {
         @apply max-w-full flex flex-col xl:flex-row bg-white overflow-y-auto grow gap-5 xl:gap-0 p-5;
@@ -30,22 +30,32 @@
         }
     }
     @scope(.content-container:is(.web)){
-        .content-card { @apply relative grid grid-cols-12 sm:grid-rows-2 border border-slate-200 bg-slate-50 rounded-lg p-0 xl:max-w-[50%] max-h-full sm:max-h-none xl:max-h-[400px] grow m-2 overflow-x-hidden bg-white; }
+        .content-card {
+            @apply relative grid grid-cols-12 grid-rows-1 border border-slate-200 bg-slate-50 rounded-lg p-0 row-span-1 col-span-12 xl:w-[50%] max-h-full xl:max-h-[350px] m-2 overflow-x-hidden bg-white min-h-[50%];
+        }
         @scope(.content-card){
             .img-wrapper {
                 @apply relative hidden sm:flex col-span-12 sm:col-span-6 max-h-[300px] sm:max-h-none items-center z-1 gap-5;
             }
             .card-body {
-                @apply flex flex-col bg-white col-span-12 sm:col-span-6 sm:row-span-2 z-2;
+                @apply relative flex flex-col bg-white col-span-12 sm:col-span-6 row-span-2 xl:row-span-1 z-2 overflow-y-auto;
+            }
+            .git-container {
+                @apply row-span-1 col-span-12;
             }
             @scope(.img-wrapper){
                 .img-cover { @apply min-w-full flex justify-center max-h-full; }
                 img { @apply scale-90 sm:scale-100 object-contain; }
             }
             @scope(.card-body){
-                header { @apply font-bold text-sm p-2 bg-slate-800 text-slate-50; }
-                .card-main { @apply grow p-2; }
-                .card-text { @apply text-xs sm:text-sm; }
+                header { @apply sticky top-0 font-bold text-sm p-2 bg-slate-800 text-slate-50; }
+                .card-main { @apply grow flex flex-col gap-3 p-2; }
+                .card-text { @apply grow flex flex-col grow gap-3 text-xs sm:text-sm; }
+                .ic-wrapper { @apply flex flex-row p-2 border rounded-lg border-slate-200 max-w-full overflow-x-hidden bg-slate-100 flex-wrap justify-center gap-3; }
+                @scope (.ic-wrapper){
+                    .text-wrapper { @apply grow min-h-full; }
+                    img { @apply max-h-[30px] lg:max-h-[20px]; }
+                }
             }
         }
         @scope(.content-card:is(.p-1)){
