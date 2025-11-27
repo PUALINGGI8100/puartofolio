@@ -3,6 +3,9 @@ import React from "react";
 // icons
 import DtsIcon from "~/assets/certificates/dts.png";
 import CNAIcon from "~/assets/certificates/cisco_NA.png";
+import IBMIcon from "~/assets/certificates/ibm.png";
+import DicodingIcon from "~/assets/certificates/dicoding.png";
+import DQLIcon from "~/assets/certificates/dqlab.png";
 import IDNIcon from "~/assets/certificates/idn.png";
 // cert dts
 import FNAFundamental from "~/assets/certificates/dts/cert-fundamental.png";
@@ -12,14 +15,20 @@ import CNAHtml from "~/assets/certificates/cna/cert-html.png";
 // cert IDN
 import IDNJaringanDasar from "~/assets/certificates/idn/cert-jkd.png";
 import IDNCSDasar from "~/assets/certificates/idn/cert-csd.png";
+// 
+import Card_Row from "./ui/card_row";
 
 interface Props {};
 
 const Content_Certificates : React.FC<Props> = () => {
     return (
         <section className="content-container">
-
-            <section className="slide-container">
+            <Card_Row imgSource={CNAIcon} altText="CNA" title="CNA" desc="Cisco Network Academy" cropped={false} href="cna" />
+            <Card_Row imgSource={IBMIcon} altText="IBM" title="IBM" desc="IBM Skillsbuild" cropped={false} href="ibm" />
+            <Card_Row imgSource={DtsIcon} altText="Digitalent" title="DTS" desc="DigiTalent Scholarship" cropped={true}  href="dts"/>
+            <Card_Row imgSource={DicodingIcon} altText="Dicoding" title="G" desc="Dicoding" cropped={false} href="g" />
+            <Card_Row imgSource={DQLIcon} altText="DQLab" title="DQL" desc="DQLab" cropped={false} href="dql" />
+            {/* <section className="slide-container">
                 <header>
                     <img src={DtsIcon} alt="DTS Icon" className="h-logo" />
                     <h2>Digital Talent Scolarship (<em>DIGITALENT</em>)</h2>
@@ -35,35 +44,7 @@ const Content_Certificates : React.FC<Props> = () => {
                         <img src={FNAFundamental} alt="Fundamental Network Administration" loading="lazy" />
                     </a>
                 </div>
-            </section>
-            <section className="slide-container cna">
-                <header>
-                    <img src={CNAIcon} alt="CNA Icon" className="h-logo" />
-                    <h2>Cisco Networking Academy (<em>CNA</em>)</h2>
-                </header>
-                <div className="slide-content">
-                    <a href="#" role="article">
-                        <img src={CNAHtml} alt="HTML Essentials" loading="lazy" />
-                    </a>
-                </div>
-            </section>
-            <section className="slide-container idn">
-                <header>
-                    <img src={IDNIcon} alt="IDN Icon" className="h-logo" />
-                    <h2>ID Networkings (<em>ID-N</em>)</h2>
-                </header>
-                <div className="slide-content dts">
-                    <a href="#" role="article">
-                        <img src={IDNJaringanDasar} alt="Jaringan Dasar" loading="lazy" />
-                    </a>
-                    <a href="#" role="article">
-                        <img src={IDNCSDasar} alt="CyberSecurity Dasar" loading="lazy" />
-                    </a>
-                    <a href="#" role="article">
-                        <img src={IDNJaringanDasar} alt="Jaringan Dasar" loading="lazy" />
-                    </a>
-                </div>
-            </section>
+            </section> */}
 
         </section>
     )

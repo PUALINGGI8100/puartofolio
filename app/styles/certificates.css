@@ -19,13 +19,28 @@
         @apply flex sticky top-0 p-5 bg-slate-500 items-center text-slate-100;
     }
     .content-container {
-        @apply relative flex flex-col max-h-full overflow-y-auto;
+        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0;
     }
     @scope (.nav-container) {
         header { @apply text-center grow; }
         h2 { @apply font-bold; }
     }
     @scope (.content-container) {
+        /* New */
+        .card-row-container {
+            @apply flex flex-col gap-0 border border-slate-200 rounded-lg w-[50%] gap-3 h-max p-5 items-center justify-center scale-90 hover:bg-slate-500 hover:text-slate-100 hover:scale-100 transition-all;
+            
+        }
+        @scope(.card-row-container){
+            .card-row-img {
+                @apply w-20 h-20;
+                object-fit: contain;
+            }
+            .card-row-img.crop { clip-path: inset(0% 0% 30% 0%); }
+            h2,h5 { @apply font-bold text-center; }
+            h2 { @apply text-2xl; }
+        }
+        /* Old */
         .slide-container {
             @apply flex min-h-max min-w-full flex-col overflow-x-hidden;
         }
