@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 .card-certificates {
-    @apply flex flex-col max-w-full max-h-full md:max-w-xl xl:max-w-5xl overflow-y-hidden bg-slate-100;
+    @apply flex relative flex-col max-w-full max-h-full md:max-w-xl xl:max-w-5xl overflow-y-hidden;
+}
+
+@scope (.card-container){
+    .card-certificates { border: unset !important; }
 }
 
 @scope (.card-certificates) {
@@ -19,7 +23,7 @@
         @apply flex sticky top-0 p-5 bg-slate-500 items-center text-slate-100;
     }
     .content-container {
-        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0;
+        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0 p-5;
     }
     @scope (.nav-container) {
         header { @apply text-center grow; }
@@ -52,6 +56,7 @@
             .slide-content { @apply relative flex min-w-full grow; }
             .slide-content.dts { animation: Ltr_dts 15s ease-in-out infinite; }
             .slide-content.idn { animation: Ltr_idn 15s ease-in-out infinite; }
+            .slide-content.ibm.dcds { animation: Ltr_ibm_dcds 15s ease-in-out infinite; }
             @scope (header) {
                 img { @apply max-w-[20px] sm:max-w-[30px]; }
             }
@@ -69,6 +74,11 @@
     @keyframes Ltr_idn {
         from { left:0; }
         to { left: -200%; }
+    }
+
+    @keyframes Ltr_ibm_dcds {
+        from { left:0; }
+        to { left: -400%; }
     }
 
 }
