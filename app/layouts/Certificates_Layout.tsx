@@ -1,15 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Card_Projects from "~/components/projects/Card_Projects";
-import Custom_TopBar from "~/components/ui/Custom_TopBar";
+import Card_Certificates from "~/components/certificates/Card_Certificates";
 
-import "~/styles/projects.css";
+import "~/styles/certificates.css";
 
 const Certificates_Layout : React.FC = () => {
     return (
-        <Card_Projects>
+        <Card_Certificates>
             <Outlet />
-        </Card_Projects>
+        </Card_Certificates>
     )
 }
 
