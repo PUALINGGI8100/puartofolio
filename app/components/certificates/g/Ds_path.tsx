@@ -1,6 +1,7 @@
 import React from "react";
 
 import ic from "~/assets/certificates/dicoding.png";
+
 import ai_dasar from "~/assets/certificates/g/ds_learning_path/ai_dasar.png";
 import py_dasar from "~/assets/certificates/g/ds_learning_path/py_dasar.png";
 import sql_dasar from "~/assets/certificates/g/ds_learning_path/sql_dasar.png";
