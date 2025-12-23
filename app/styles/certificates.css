@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 .card-certificates {
-    @apply flex relative flex-col max-w-full max-h-full md:max-w-xl xl:max-w-5xl overflow-y-hidden;
+    @apply flex flex-col max-w-full max-h-full md:max-w-xl xl:max-w-5xl overflow-y-hidden;
+    border: unset !important;
 }
 
 @scope (.card-container){
@@ -9,6 +10,7 @@
 }
 
 @scope (.card-certificates) {
+    /* .content-container { @apply relative; } */
     img {
          user-drag: none;
         -webkit-user-drag: none; /* For Webkit browsers like Chrome, Safari */
@@ -23,7 +25,8 @@
         @apply flex sticky top-0 p-5 bg-slate-500 items-center text-slate-100;
     }
     .content-container {
-        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0 p-5;
+        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0 p-5 border border-slate-100;
+        height: 100%;
     }
     @scope (.nav-container) {
         header { @apply text-center grow; }
@@ -46,7 +49,7 @@
         }
         /* Old */
         .slide-container {
-            @apply flex min-h-max min-w-full flex-col overflow-x-hidden;
+            @apply flex min-h-max min-w-full flex-col overflow-x-hidden relative;
         }
         @scope(.slide-container){
             header {
@@ -54,29 +57,26 @@
             }
             h2 { @apply font-bold text-sm sm:text-lg; }
             .slide-content { @apply relative flex min-w-full grow; }
-            .slide-content.dts { animation: Ltr_dts 15s ease-in-out infinite; }
-            .slide-content.idn { animation: Ltr_idn 15s ease-in-out infinite; }
-            .slide-content.ibm.dcds { animation: Ltr_ibm_dcds 15s ease-in-out infinite; }
+            .slide-content.comp-2 { animation: Ltr_comp_2 15s ease-in-out infinite; }
+            .slide-content.comp-4 { animation: Ltr_comp_4 30s ease-in-out infinite; }
+            .relative-wrapper { @apply relative overflow-hidden; }
             @scope (header) {
                 img { @apply max-w-[20px] sm:max-w-[30px]; }
             }
             @scope (.slide-content){
-                a { @apply min-w-full relative scale-90 hover:scale-95 transition-all duration-150 ease-in-out; }
+                a { @apply flex items-center justify-center min-w-full relative scale-90 hover:scale-95 transition-all duration-150 ease-in-out; }
+                img { @apply w-full h-full; }
             }
         }
     }
 
-    @keyframes Ltr_dts {
+    @keyframes Ltr_comp_2 {
         from { left:0; }
         to { left: -200%; }
     }
     
-    @keyframes Ltr_idn {
-        from { left:0; }
-        to { left: -200%; }
-    }
 
-    @keyframes Ltr_ibm_dcds {
+    @keyframes Ltr_comp_4 {
         from { left:0; }
         to { left: -400%; }
     }

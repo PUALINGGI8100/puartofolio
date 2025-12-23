@@ -6,9 +6,9 @@ import "~/styles/certificates.css";
 
 const Certificates_Layout : React.FC = () => {
     return (
-        <Card_Certificates>
-            <Outlet />
-        </Card_Certificates>
+        <Outlet />
+        // <Card_Certificates>
+        // </Card_Certificates>
     )
 }
 

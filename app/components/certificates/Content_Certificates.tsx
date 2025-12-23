@@ -8,17 +8,29 @@ import DicodingIcon from "~/assets/certificates/dicoding.png";
 import DQLIcon from "~/assets/certificates/dqlab.png";
 // 
 import Card_Row from "./ui/card_row";
+import Main_Skeleton from "../ui/Main_Skeleton";
 
 interface Props {};
 
 const Content_Certificates : React.FC<Props> = () => {
     return (
         <section className="content-container">
-            <Card_Row imgSource={CNAIcon} altText="CNA" title="CNA" desc="Cisco Network Academy" cropped={false} href="cna" />
-            <Card_Row imgSource={IBMIcon} altText="IBM" title="IBM" desc="IBM Skillsbuild" cropped={false} href="ibm" />
-            <Card_Row imgSource={DtsIcon} altText="Digitalent" title="DTS" desc="DigiTalent Scholarship" cropped={true}  href="dts"/>
-            <Card_Row imgSource={DicodingIcon} altText="Dicoding" title="G" desc="Dicoding" cropped={false} href="g" />
-            <Card_Row imgSource={DQLIcon} altText="DQLab" title="DQL" desc="DQLab" cropped={false} href="dql" />
+            {/* <Main_Skeleton /> */}
+            <Card_Row imgSource={CNAIcon} altText="CNA" title="CNA"    desc="Cisco Network Academy" cropped={false} href="cna">
+                <Main_Skeleton />
+            </Card_Row>
+            <Card_Row imgSource={IBMIcon} altText="IBM" title="IBM" desc="IBM Skillsbuild" cropped={false} href="ibm">
+                <Main_Skeleton />
+            </Card_Row>
+            <Card_Row imgSource={DtsIcon} altText="Digitalent" title="DTS" desc="DigiTalent Scholarship" cropped={true}  href="dts">
+                <Main_Skeleton />
+            </Card_Row>
+            <Card_Row imgSource={DicodingIcon} altText="Dicoding" title="G" desc="Dicoding" cropped={false} href="g">
+                <Main_Skeleton />
+            </Card_Row>
+            <Card_Row imgSource={DQLIcon} altText="DQLab" title="DQL" desc="DQLab" cropped={false} href="dql">
+                <Main_Skeleton />
+            </Card_Row>
         </section>
     )
 }
