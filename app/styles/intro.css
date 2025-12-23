@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .card-intro {
-    @apply grow flex flex-col max-w-full md:max-w-xl;
+    @apply grow relative flex flex-col max-w-full md:max-w-xl overflow-y-hidden;
 }
 
 @scope (.card-intro) {
@@ -19,9 +19,19 @@
             @apply max-w-[150px] max-h-[150px] relative grow border border-slate-200 rounded-full flex justify-center pt-2 bg-cyan-300;
         }
         @scope (.img-wrapper){
-            .q-link { @apply absolute right-0 top-0 border border-slate-200 rounded-full p-2 bg-slate-50 hover:scale-105; }
-            img { @apply object-scale-down max-h-full w-[150px] rounded-full; }
-            p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold; }
+            .q-link { @apply absolute right-0 top-0 border border-slate-200 rounded-full p-2 bg-slate-50 hover:scale-105 z-2; }
+            .img-container { @apply relative flex p-0 m-0; }
+            .skeleton-main {
+                @apply rounded-full m-0 overflow-hidden; z-index: 1 !important;
+                width: calc(100% + 10px);
+                height: calc(100% + 10px) !important;
+                left: -5px !important;
+                top: -5px !important;
+            }
+            @scope(.img-container){
+                img { @apply object-scale-down max-h-full w-[150px] rounded-full; }
+            }
+            p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold z-2; }
             @scope (.q-link){
                 * { animation: anim_rotations 5s infinite; animation-delay: 1s; }
             }
