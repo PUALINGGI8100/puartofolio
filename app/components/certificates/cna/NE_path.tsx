@@ -18,7 +18,6 @@ const NE_Path : React.FC = ()=>{
                             <img src={cert_net_basic} alt="Network Basic" loading="lazy" />
                         </a>
                     </div>
-
                 </div>
             </section>
     )
