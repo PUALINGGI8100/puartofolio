@@ -33,7 +33,7 @@
             }
             p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold z-2; }
             @scope (.q-link){
-                * { animation: anim_rotations 5s infinite; animation-delay: 1s; }
+                /* * { animation: anim_rotations 5s infinite; animation-delay: 1s; } */
             }
         }
         .descriptive-wrapper {

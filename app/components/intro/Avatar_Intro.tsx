@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { FaQuestion } from "react-icons/fa";
-import foto from "~/assets/images/profile.png";
+import foto from "~/assets/images/profile.webp";
 import Main_Skeleton from "../ui/Main_Skeleton";
 
 const Avatar_Intro : React.FC = ()=>{
