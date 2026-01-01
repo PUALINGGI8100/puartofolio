@@ -14,7 +14,7 @@ const WEB_path : React.FC = ()=>{
                 </header>
                 <div className="relative-wrapper">
                     <Main_Skeleton />
-                    <div className="slide-content dts">
+                    <div className="slide-content comp-2">
                         <a href="#" role="article">
                             <img src={cert_html} alt="HTML Essentials" loading="lazy" />
                         </a>

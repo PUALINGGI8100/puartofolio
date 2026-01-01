@@ -18,7 +18,7 @@ const Main_Skeleton : React.FC = ()=>{
       const timer = setTimeout(() => {
         setIsVisible(false);
         sessionStorage.setItem(storrageKey, "true");
-      }, 3000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }

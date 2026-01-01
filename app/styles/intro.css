@@ -9,14 +9,14 @@
         @apply flex flex-col justify-center items-center py-10 px-5 grow rounded;
     }
     .social-container {
-        @apply flex flex-col items-center justify-end md:justify-center gap-8 py-10 grow bg-slate-100 rounded px-5 grow;
+        @apply flex flex-col items-center justify-end md:justify-center gap-8 py-10 grow bg-slate-100 rounded-b px-5 grow bg-slate-200 dark:bg-slate-300;
     }
     .nav-container {
-        @apply flex items-center justify-center gap-5 max-h-[1px] z-1;
+        @apply flex items-center justify-center gap-5 max-h-[1px] z-1 dark:bg-slate-500;
     }
     @scope (.avatar-container){
         .img-wrapper {
-            @apply max-w-[150px] max-h-[150px] relative grow border border-slate-200 rounded-full flex justify-center pt-2 bg-cyan-300;
+            @apply max-w-[150px] max-h-[150px] relative grow border border-slate-200 rounded-full flex justify-center pt-2 bg-cyan-300 text-slate-800;
         }
         @scope (.img-wrapper){
             .q-link { @apply absolute right-0 top-0 border border-slate-200 rounded-full p-2 bg-slate-50 hover:scale-105 z-2; }
@@ -33,7 +33,7 @@
             }
             p { @apply absolute -bottom-5 bg-slate-50 p-2 border border-slate-100 rounded text-sm font-bold z-2; }
             @scope (.q-link){
-                * { animation: anim_rotations 5s infinite; animation-delay: 1s; }
+                /* * { animation: anim_rotations 5s infinite; animation-delay: 1s; } */
             }
         }
         .descriptive-wrapper {
@@ -46,7 +46,7 @@
         }
     }
     @scope (.social-container){
-        h2 { @apply text-xl md:text-2xl font-bold; }
+        h2 { @apply text-xl md:text-2xl font-bold text-slate-800; }
         .links-wrapper { @apply flex flex-wrap gap-4 items-center justify-center; }
         @scope (.links-wrapper) {
             a { @apply transition-all duration-150 ease-in-out text-lg md:text-3xl hover:scale-120; }

@@ -8,7 +8,7 @@ p { @apply m-0; }
 
 @scope (.app-main){
     .card-container {
-        @apply border border-slate-200 rounded lg:rounded-lg grow;
+        @apply border border-slate-200 dark:border-slate-400 rounded lg:rounded-lg grow;
     }
 }
 

@@ -25,7 +25,7 @@
         @apply flex sticky top-0 p-5 bg-slate-500 items-center text-slate-100;
     }
     .content-container {
-        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0 p-5 border border-slate-100;
+        @apply relative flex flex-row max-h-full overflow-y-auto flex-wrap gap-0 p-5 border rounded-b-lg border-slate-100 dark:border-slate-500 border-t-0;
         height: 100%;
     }
     @scope (.nav-container) {
@@ -55,7 +55,7 @@
             header {
                 @apply flex gap-3 w-full p-5 text-center bg-slate-200 text-slate-700 items-center justify-center;
             }
-            h2 { @apply font-bold text-sm sm:text-lg; }
+            h2 { @apply font-bold text-sm sm:text-base xl:text-lg; }
             .slide-content { @apply relative flex min-w-full grow; }
             .slide-content.comp-2 { animation: Ltr_comp_2 15s ease-in-out infinite; }
             .slide-content.comp-4 { animation: Ltr_comp_4 30s ease-in-out infinite; }
