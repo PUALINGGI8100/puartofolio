@@ -25,39 +25,39 @@ const Main_Skeleton : React.FC = ()=>{
   }, [isVisible, storrageKey]);
 
   return (
- <AnimatePresence>
-  {isVisible && (
-    <motion.div
-      key="skeleton-wrapper"
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="skeleton-main"
-      style={{
-        position: "absolute",
-        // Inset 0 memastikan menempel di semua sisi parent
-        height: "100%",
-        top: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "white",
-        zIndex: 100,
-        display: "flex" // Memastikan anak bisa tumbuh
-      }}
-    >
-      <motion.div
-        key="skeleton-shimmer"
-        animate={{ opacity: [0.2, 0.8, 0.2] }}
-        transition={{ repeat: Infinity, duration: 1.2 }}
-        style={{
-          flex: 1, // Menggantikan 'grow' agar lebih stabil di semua browser
-          backgroundColor: "#eeeeeea4",
-          pointerEvents: "none",
-        }}
-      />
-    </motion.div>
-  )}
-</AnimatePresence>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          key="skeleton-wrapper"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="skeleton-main"
+          style={{
+            position: "absolute",
+            // Inset 0 memastikan menempel di semua sisi parent
+            height: "100%",
+            top: 0,
+            left: 0,
+            right: 0,
+            backgroundColor: "white",
+            zIndex: 100,
+            display: "flex" // Memastikan anak bisa tumbuh
+          }}
+        >
+          <motion.div
+            key="skeleton-shimmer"
+            animate={{ opacity: [0.2, 0.8, 0.2] }}
+            transition={{ repeat: Infinity, duration: 1.2 }}
+            style={{
+              flex: 1, // Menggantikan 'grow' agar lebih stabil di semua browser
+              backgroundColor: "#eeeeeea4",
+              pointerEvents: "none",
+            }}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

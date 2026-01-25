@@ -3,12 +3,17 @@
 p { @apply m-0; }
 
 .app-main {
-    @apply absolute left-0 top-0 min-h-[100vh] max-h-[100vh] min-w-[100vw] p-2 sm:p-5 flex justify-center;
+    @apply absolute left-0 top-0 min-h-[100dvh] max-h-[100dvh] min-w-[100vw] p-2 sm:p-5 flex justify-center;
 }
 
 @scope (.app-main){
     .card-container {
         @apply border border-slate-200 dark:border-slate-400 rounded lg:rounded-lg grow;
+        /* Memberikan jarak aman di semua sisi */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
 }
 

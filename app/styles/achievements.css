@@ -9,7 +9,7 @@
         @apply flex sticky top-0 p-5 bg-slate-500 items-center text-slate-100;
     }
     .content-container {
-        @apply flex grow h-full w-full p-5;
+        @apply flex grow h-full w-full p-5 overflow-y-auto;
     }
     @scope (.nav-container) {
         header { @apply text-center grow; }

@@ -1,8 +1,8 @@
 
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaTelegram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaGithub, FaYoutube } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import {FACEBOOK_URL, GMAIL_URL, INSTAGRAM_URL, LINKEDIN_URL, TELE_URL, X_URL, YOUTUBE_URL} from "~/constants/socialLinks";
+import {FACEBOOK_URL, GMAIL_URL, INSTAGRAM_URL, LINKEDIN_URL, GIT_URL, YOUTUBE_URL} from "~/constants/socialLinks";
 
 const Social_Intro : React.FC = () => {
     return (
@@ -18,11 +18,8 @@ const Social_Intro : React.FC = () => {
                 <a href={GMAIL_URL} target="_blank" title="GMAIL">
                     <SiGmail className="text-orange-500" />
                 </a>
-                <a href={TELE_URL} target="_blank" title="TELEGRAM">
-                    <FaTelegram className="text-blue-400" />
-                </a>
-                <a href={X_URL} target="_blank" title="X">
-                    <FaTwitter className="text-sky-500" />
+                <a href={GIT_URL} target="_blank" title="GITHUB">
+                    <FaGithub className="text-slate-800" />
                 </a>
                 <a href={YOUTUBE_URL} target="_blank" title="YOUTUBE">
                     <FaYoutube className="text-rose-500" />
