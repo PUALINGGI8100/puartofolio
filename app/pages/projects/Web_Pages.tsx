@@ -34,7 +34,7 @@ const Web_Pages : React.FC<props> = () => {
                     </header>
                     <div className="card-main">
                         <span className="card-text">
-                            <p>Merupakan salah satu syarat untuk menyelesaikan program sarjana di Universitas Al Asyariah Mandar. Sistem dikembangkan Menggunakan <strong>ESDLC</strong> (Durkin, 1994, hlm. 217), Data diolah secara kuantitatif dengan memanfaatkan pendekatan <strong>certainty factor</strong> (Durkin, 1994, hlm. 344-353).</p>
+                            <p>Evidence Based Expert System, yang mampu mendiagnosa penyakit maupun hama jagung berdasarkan gejala-gejala yang di tentukan. Sistem dikembangkan Menggunakan <strong>ESDLC</strong> (Durkin, 1994, hlm. 217), Data diolah secara kuantitatif dengan memanfaatkan pendekatan <strong>certainty factor</strong> (Durkin, 1994, hlm. 344-353).</p>
                         </span>
                         <span className="ic-wrapper">
                             <img src={ICLaravel} alt="" />
@@ -57,7 +57,7 @@ const Web_Pages : React.FC<props> = () => {
                     </header>
                     <div className="card-main">
                         <span className="card-text">
-                            <p>Merupakan salah satu syarat untuk menyelesaikan fundamental course <strong>ReVoU</strong>.</p>
+                            <p>Merupakan salah satu syarat untuk menyelesaikan fundamental course <strong>ReVoU</strong>. Layout sederhana yang memanfaatkan native HTML, CSS, JS. Menerapkan <strong>Custom Element</strong>, serta  <strong>Event &amp; Context Management</strong>. </p>
                         </span>
                         <span className="ic-wrapper">
                             <img src={ICHtml} alt="" />

@@ -42,14 +42,14 @@
         @scope (.descriptive-wrapper){
             .passion-wrapper { @apply flex gap-1 sm:gap-3 flex-wrap justify-center text-nowrap; }
             h2 { @apply text-2xl font-bold; }
-            p { @apply text-[5pt] sm:text-xs font-bold border border-slate-200 rounded p-1; }
+            p { @apply text-[6pt] sm:text-xs font-bold border border-slate-200 rounded p-1; }
         }
     }
     @scope (.social-container){
         h2 { @apply text-xl md:text-2xl font-bold text-slate-800; }
-        .links-wrapper { @apply flex flex-wrap gap-4 items-center justify-center; }
+        .links-wrapper { @apply flex flex-wrap gap-5 items-center justify-center; }
         @scope (.links-wrapper) {
-            a { @apply transition-all duration-150 ease-in-out text-lg md:text-3xl hover:scale-120; }
+            a { @apply transition-all duration-150 ease-in-out text-xl md:text-3xl hover:scale-120; }
         }
     }
     @scope (.nav-container){
